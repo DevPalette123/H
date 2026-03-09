@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -183,6 +182,13 @@ header p{color:rgba(212,175,55,.6);font-size:.9rem;margin-top:8px;line-height:1.
   font-size:.8rem;font-weight:700;padding:9px 16px;cursor:pointer;
   width:100%;transition:all .2s;margin-top:2px}
 .add-link-btn:hover{background:rgba(212,175,55,.05);border-color:rgba(212,175,55,.42)}
+.cb-lbl{display:flex;align-items:center;gap:6px;cursor:pointer;padding:7px 12px;
+  border-radius:8px;border:1px solid rgba(212,175,55,.18);background:rgba(212,175,55,.03);
+  transition:all .2s;font-size:.82rem;color:var(--muted);font-weight:700;user-select:none}
+.cb-lbl:hover{background:rgba(212,175,55,.09);border-color:rgba(212,175,55,.38);color:var(--txt)}
+.cb-lbl input[type=checkbox]{display:none}
+.cb-lbl input[type=checkbox]:checked + span{color:var(--goldl)}
+.cb-lbl:has(input:checked){background:rgba(212,175,55,.15);border-color:rgba(212,175,55,.45);color:var(--goldl);box-shadow:0 0 8px rgba(212,175,55,.12)}
 .toast{position:fixed;bottom:26px;right:24px;
   background:linear-gradient(160deg,rgba(20,16,5,.97),rgba(12,10,3,.99));
   border:1px solid rgba(15,217,160,.35);border-radius:12px;
@@ -262,7 +268,7 @@ header p{color:rgba(212,175,55,.6);font-size:.9rem;margin-top:8px;line-height:1.
   <!-- FORM -->
   <div class="pg" id="pgForm">
     <div class="form-card" id="fCard">
-      <h2>&#128236; &#1606;&#1605;&#1608;&#1584;&#1580; &#1575;&#1604;&#1605;&#1588;&#1575;&#1585;&#1603;&#1577;</h2>
+      <h2>&#128236; &#1575;&#1604;&#1576;&#1610;&#1575;&#1606;&#1575;&#1578; &#1575;&#1604;&#1571;&#1587;&#1575;&#1587;&#1610;&#1577; (&#1575;&#1604;&#1578;&#1593;&#1585;&#1610;&#1601;&#1610;&#1577;)</h2>
 
       <div class="fsec">&#1575;&#1604;&#1576;&#1610;&#1575;&#1606;&#1575;&#1578; &#1575;&#1604;&#1571;&#1587;&#1575;&#1587;&#1610;&#1577;</div>
       <div class="row2">
@@ -277,16 +283,15 @@ header p{color:rgba(212,175,55,.6);font-size:.9rem;margin-top:8px;line-height:1.
       </div>
       <div class="row2">
         <div class="fld">
-          <label>&#1575;&#1604;&#1605;&#1585;&#1581;&#1604;&#1577; &#1575;&#1604;&#1583;&#1585;&#1575;&#1587;&#1610;&#1577; <span class="r">*</span></label>
-          <select id="fLevel">
-            <option value="">&#1575;&#1582;&#1578;&#1585;</option>
-            <option>&#1575;&#1604;&#1589;&#1601; &#1575;&#1604;&#1582;&#1575;&#1605;&#1587;</option>
-            <option>&#1575;&#1604;&#1589;&#1601; &#1575;&#1604;&#1587;&#1575;&#1583;&#1587;</option>
-            <option>&#1575;&#1604;&#1589;&#1601; &#1575;&#1604;&#1587;&#1575;&#1576;&#1593;</option>
-            <option>&#1575;&#1604;&#1589;&#1601; &#1575;&#1604;&#1579;&#1575;&#1605;&#1606;</option>
-            <option>&#1575;&#1604;&#1589;&#1601; &#1575;&#1604;&#1578;&#1575;&#1587;&#1593;</option>
-            <option>&#1575;&#1604;&#1589;&#1601; &#1575;&#1604;&#1593;&#1575;&#1588;&#1585;</option>
-          </select>
+          <label>&#1575;&#1604;&#1605;&#1585;&#1581;&#1604;&#1577; &#1575;&#1604;&#1583;&#1585;&#1575;&#1587;&#1610;&#1577; <span class="r">*</span> <span style="font-size:.65rem;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">&#1610;&#1605;&#1603;&#1606; &#1575;&#1582;&#1578;&#1610;&#1575;&#1585; &#1571;&#1603;&#1579;&#1585; &#1605;&#1606; &#1589;&#1601;</span></label>
+          <div id="fLevelWrap" style="display:flex;flex-wrap:wrap;gap:8px;padding:12px 14px;background:rgba(8,6,2,.75);border:1px solid rgba(212,175,55,.14);border-radius:11px;transition:border .22s,box-shadow .22s;">
+            <label class="cb-lbl"><input type="checkbox" class="lvl-cb" value="&#1575;&#1604;&#1589;&#1601; &#1575;&#1604;&#1582;&#1575;&#1605;&#1587;"><span>&#1575;&#1604;&#1582;&#1575;&#1605;&#1587;</span></label>
+            <label class="cb-lbl"><input type="checkbox" class="lvl-cb" value="&#1575;&#1604;&#1589;&#1601; &#1575;&#1604;&#1587;&#1575;&#1583;&#1587;"><span>&#1575;&#1604;&#1587;&#1575;&#1583;&#1587;</span></label>
+            <label class="cb-lbl"><input type="checkbox" class="lvl-cb" value="&#1575;&#1604;&#1589;&#1601; &#1575;&#1604;&#1587;&#1575;&#1576;&#1593;"><span>&#1575;&#1604;&#1587;&#1575;&#1576;&#1593;</span></label>
+            <label class="cb-lbl"><input type="checkbox" class="lvl-cb" value="&#1575;&#1604;&#1589;&#1601; &#1575;&#1604;&#1579;&#1575;&#1605;&#1606;"><span>&#1575;&#1604;&#1579;&#1575;&#1605;&#1606;</span></label>
+            <label class="cb-lbl"><input type="checkbox" class="lvl-cb" value="&#1575;&#1604;&#1589;&#1601; &#1575;&#1604;&#1578;&#1575;&#1587;&#1593;"><span>&#1575;&#1604;&#1578;&#1575;&#1587;&#1593;</span></label>
+            <label class="cb-lbl"><input type="checkbox" class="lvl-cb" value="&#1575;&#1604;&#1589;&#1601; &#1575;&#1604;&#1593;&#1575;&#1588;&#1585;"><span>&#1575;&#1604;&#1593;&#1575;&#1588;&#1585;</span></label>
+          </div>
         </div>
         <div class="fld">
           <label>&#1575;&#1604;&#1578;&#1608;&#1575;&#1589;&#1604; <span class="r">*</span></label>
@@ -527,7 +532,7 @@ function toB64(f){
 function validate(){
   var fields = [
     {id:"fName",l:"اسم المعلمة"},{id:"fSpec",l:"التخصص"},
-    {id:"fLevel",l:"المرحلة"},{id:"fContact",l:"التواصل"},
+    {id:"fContact",l:"التواصل"},
     {id:"fTitle",l:"عنوان المبادرة"},{id:"fCat",l:"مجال التميز"},
     {id:"fDesc",l:"وصف الفكرة"},{id:"fImpact",l:"الأثر المتحقق"}
   ];
@@ -540,6 +545,14 @@ function validate(){
       showToast("يرجى إدخال: " + fields[i].l, "er");
       return false;
     }
+  }
+  var checkedLevels = document.querySelectorAll(".lvl-cb:checked");
+  if(!checkedLevels.length){
+    var wrap = document.getElementById("fLevelWrap");
+    wrap.style.borderColor = "rgba(255,77,109,.5)";
+    setTimeout(function(){ wrap.style.borderColor=""; }, 2000);
+    showToast("يرجى اختيار المرحلة الدراسية", "er");
+    return false;
   }
   if(!document.getElementById("fFile").files.length){
     showToast("يرجى رفع ملف الإنجاز", "er"); return false;
@@ -562,7 +575,7 @@ function doSubmit(){
     date: new Date().toLocaleDateString("ar-SA"),
     name:    document.getElementById("fName").value.trim(),
     spec:    document.getElementById("fSpec").value.trim(),
-    level:   document.getElementById("fLevel").value,
+    level:   Array.prototype.map.call(document.querySelectorAll(".lvl-cb:checked"), function(c){ return c.value; }).join(" | "),
     contact: document.getElementById("fContact").value.trim(),
     title:   document.getElementById("fTitle").value.trim(),
     cat:     document.getElementById("fCat").value,
@@ -643,7 +656,10 @@ function resetForm(){
   ["fName","fSpec","fContact","fTitle","fMsg","fDesc","fImpact"].forEach(function(i){
     document.getElementById(i).value = "";
   });
-  document.getElementById("fLevel").selectedIndex = 0;
+  document.getElementById("fLevel") && (document.getElementById("fLevel").selectedIndex = 0);
+  document.querySelectorAll(".lvl-cb").forEach(function(c){ c.checked = false; });
+  var wrap = document.getElementById("fLevelWrap");
+  if(wrap) wrap.style.borderColor = "";
   document.getElementById("fCat").selectedIndex   = 0;
   ["ch1","ch2","ch3"].forEach(function(i){ document.getElementById(i).innerHTML = ""; });
   ["wc1","wc2"].forEach(function(i){
